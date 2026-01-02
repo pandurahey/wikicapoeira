@@ -127,7 +127,7 @@
         <!-- Страница с инструментом и его ритмами -->
         <div id="instrument-page" class="instrument-page">
             <div class="section-header">
-                <h2 class="section-title">Инструмент и его ритмы</h2>
+                <h2 class="section-title">Инструмент</h2>
                 <button class="back-btn" onclick="backToInstruments()">Назад к списку</button>
             </div>
 
@@ -148,11 +148,8 @@
                 <span id="instrument-difficulty">Сложность: </span>
             </div>
 
-            <h3 style="margin: 30px 0 20px 0; font-size: 1.8rem; color: #ffffff;">Ритмы для этого инструмента:</h3>
-
-            <div class="rhythm-list" id="instrument-rhythms">
-                <!-- Ритмы будут добавляться динамически -->
-            </div>
+            <!-- Секция ритмов будет добавляться динамически только для беримбау -->
+            <div id="rhythms-section"></div>
         </div>
 
         <!-- Страница с ритмом капоэйры -->
@@ -461,24 +458,6 @@ Oi sim sim sim, Oi não não não`
                 difficulty: 'Низкая',
                 info: `Пандейру - это бразильская версия бубна, который широко используется в капоэйре, самбе и других бразильских музыкальных стилях. Он добавляет текстуру и ритмическое разнообразие.`,
                 rhythms: [
-                    {
-                        id: 'sao-bento-pequeno',
-                        title: 'Сао Бенто Пекуено',
-                        description: `Сао Бенто Пекуено - это средний по темпу ритм, который используется для обучения начинающих капоэйристов.`,
-                        pattern: '| X . X . | X . . X | . X . X | . . X . |',
-                        origin: 'Бразилия',
-                        speed: 'Средний',
-                        difficulty: 'Низкая'
-                    },
-                    {
-                        id: 'samba-pandeiro',
-                        title: 'Самба',
-                        description: `Самба - это традиционный бразильский ритм, который также используется в капоэйре.`,
-                        pattern: '| X X X X | X X X X | X X X X | X X X X |',
-                        origin: 'Бразилия',
-                        speed: 'Быстрый',
-                        difficulty: 'Средняя'
-                    }
                 ]
             },
             'agogo': {
@@ -489,24 +468,6 @@ Oi sim sim sim, Oi não não não`
                 difficulty: 'Низкая',
                 info: `Агого - это двойной колокольчик, который используется в капоэйре и других афро-бразильских традициях. Он создает высокие пронзительные звуки, которые добавляют ритмическую сложность.`,
                 rhythms: [
-                    {
-                        id: 'iuna-agogo',
-                        title: 'Иуна',
-                        description: `Иуна - это медленный и мелодичный ритм, который создает спокойную атмосферу для игры.`,
-                        pattern: '| X . . X | . X . . | X . X . | . . X . |',
-                        origin: 'Бразилия',
-                        speed: 'Медленный',
-                        difficulty: 'Средняя'
-                    },
-                    {
-                        id: 'samba-agogo',
-                        title: 'Самба',
-                        description: `Агого в ритме самбы создает яркий и энергичный аккомпанемент.`,
-                        pattern: '| X . X . | X . X . | X . X . | X . X . |',
-                        origin: 'Бразилия',
-                        speed: 'Быстрый',
-                        difficulty: 'Средняя'
-                    }
                 ]
             }
         };
@@ -839,6 +800,7 @@ Oi sim sim sim, Oi não não não`
 </body>
 
 </html>
+
 
 
 
